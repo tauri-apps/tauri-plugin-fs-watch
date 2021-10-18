@@ -65,7 +65,7 @@ yarn add github:tauri-apps/tauri-plugin-fs-watch#488558717b77d8a2bcb37acfd2eca96
 `package.json`
 ```json
   "dependencies": {
-    "tauri-plugin-fs-watch-api": "tauri-apps/tauri-plugin-fs-watch#v0.1.0",
+    "tauri-plugin-fs-watch-api": "github:tauri-apps/tauri-plugin-fs-watch#v0.1.0",
 ```
 
 Use within your JS/TS:
