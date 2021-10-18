@@ -69,7 +69,7 @@ yarn add github:tauri-apps/tauri-plugin-fs-watch#488558717b77d8a2bcb37acfd2eca96
 ```
 
 Use within your JS/TS:
-```
+```ts
 import { watch, watchImmediate } from 'tauri-plugin-fs-watch-api'
 
 // can also watch an array of paths
