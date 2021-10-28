@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "author": "Tauri Programme within The Commons Conservancy",
   "description": "Tauri Plugin to watch the filesystem for changes",
-  "browser": "webview-dist/index.js",
-  "main": "webview-dist/index.js",
+  "module": "webview-dist/index.min.js",
+  "main": "webview-dist/index.mjs",
   "types": "webview-dist/index.d.ts",
   "scripts": {
     "build": "rollup -c ./webview-src/rollup.config.js",
