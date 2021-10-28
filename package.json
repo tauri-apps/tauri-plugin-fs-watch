@@ -6,6 +6,7 @@
   "module": "webview-dist/index.min.js",
   "main": "webview-dist/index.mjs",
   "types": "webview-dist/index.d.ts",
+  "files": ["webview-dist"],
   "scripts": {
     "build": "rollup -c ./webview-src/rollup.config.js",
     "prepublishOnly": "yarn build",
