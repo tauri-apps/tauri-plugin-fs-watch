@@ -9,11 +9,11 @@ edition = "2018"
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = [ "derive" ] }
-tauri = { git = "https://github.com/tauri-apps/tauri", branch = "next", features = [ "api-all" ] }
+tauri = { versionn = "1.0.0-rc.0", features = [ "api-all" ] }
 tauri-plugin-fs-watch = { path = "../../../" }
 
 [build-dependencies]
-tauri-build = { version = "1.0.0-beta.4" }
+tauri-build = "1.0.0-rc.0"
 
 [features]
 default = [ "custom-protocol" ]

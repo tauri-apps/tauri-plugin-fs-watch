@@ -38,14 +38,14 @@ impl Serialize for Error {
 #[derive(Default)]
 struct WatcherCollection(Mutex<HashMap<Id, (RecommendedWatcher, Vec<PathBuf>)>>);
 
-#[derive(Serialize)]
+#[derive(Clone, Serialize)]
 struct RawEventWrapper {
   path: Option<PathBuf>,
   operation: u32,
   cookie: Option<u32>,
 }
 
-#[derive(Serialize)]
+#[derive(Clone, Serialize)]
 #[serde(tag = "type", content = "payload")]
 enum DebouncedEventWrapper {
   NoticeWrite(PathBuf),
