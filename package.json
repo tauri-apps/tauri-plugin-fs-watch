@@ -1,27 +1,29 @@
 {
-  "name": "tauri-plugin-fs-watch-api",
-  "version": "0.0.0",
-  "author": "Tauri Programme within The Commons Conservancy",
-  "description": "Tauri Plugin to watch the filesystem for changes",
-  "module": "webview-dist/index.min.js",
-  "main": "webview-dist/index.mjs",
-  "types": "webview-dist/index.d.ts",
-  "files": ["webview-dist"],
-  "scripts": {
-    "build": "rollup -c ./webview-src/rollup.config.js",
-    "prepublishOnly": "yarn build",
-    "pretest": "yarn build"
-  },
-  "devDependencies": {
-    "@rollup/plugin-node-resolve": "13.0.5",
-    "@rollup/plugin-typescript": "8.2.5",
-    "rollup": "2.58.0",
-    "rollup-plugin-terser": "7.0.2",
-    "type-fest": "^2.5.2",
-    "typescript": "4.4.3"
-  },
-  "dependencies": {
-    "@tauri-apps/api": "1.0.0-beta.8",
-    "tslib": "^2.1.0"
-  }
+    "name": "tauri-plugin-fs-watch-api",
+    "version": "0.0.0",
+    "author": "Tauri Programme within The Commons Conservancy",
+    "description": "Tauri Plugin to watch the filesystem for changes",
+    "module": "webview-dist/index.min.js",
+    "main": "webview-dist/index.mjs",
+    "types": "webview-dist/index.d.ts",
+    "files": [
+        "webview-dist"
+    ],
+    "scripts": {
+        "build": "rollup -c ./webview-src/rollup.config.js",
+        "prepublishOnly": "yarn build",
+        "pretest": "yarn build"
+    },
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "13.0.5",
+        "@rollup/plugin-typescript": "8.2.5",
+        "rollup": "2.58.0",
+        "rollup-plugin-terser": "7.0.2",
+        "type-fest": "^2.11.2",
+        "typescript": "4.4.3"
+    },
+    "dependencies": {
+        "@tauri-apps/api": "1.0.0-rc.0",
+        "tslib": "^2.3.1"
+    }
 }
