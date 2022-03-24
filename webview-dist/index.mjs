@@ -1,6 +1,7 @@
 import { invoke } from '@tauri-apps/api/tauri';
 import { appWindow } from '@tauri-apps/api/window';
 
+const w = appWindow;
 async function unwatch(id) {
     await invoke('plugin:fs-watch|unwatch', { id });
 }
@@ -23,7 +24,7 @@ async function watch(paths, options, cb) {
         paths: watchPaths,
         options: opts,
     });
-    const unlisten = await appWindow.listen(`watcher://debounced-event/${id}`, event => {
+    const unlisten = await w.listen(`watcher://debounced-event/${id}`, event => {
         cb(event.payload);
     });
     return async () => {
@@ -50,7 +51,7 @@ async function watchImmediate(paths, options, cb) {
         paths: watchPaths,
         options: opts,
     });
-    const unlisten = await appWindow.listen(`watcher://raw-event/${id}`, event => {
+    const unlisten = await w.listen(`watcher://raw-event/${id}`, event => {
         cb(event.payload);
     });
     return async () => {

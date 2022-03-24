@@ -1,5 +1,7 @@
 import { invoke } from '@tauri-apps/api/tauri'
-import { appWindow } from '@tauri-apps/api/window'
+import { appWindow, WebviewWindow } from '@tauri-apps/api/window'
+
+const w: WebviewWindow = appWindow
 
 export interface WatchOptions {
   recursive?: boolean,
@@ -51,7 +53,7 @@ export async function watch(paths: string | string[], options: DebouncedWatchOpt
     options: opts,
   })
 
-  const unlisten = await appWindow.listen<DebouncedEvent>(`watcher://debounced-event/${id}`, event => {
+  const unlisten = await w.listen<DebouncedEvent>(`watcher://debounced-event/${id}`, event => {
     cb(event.payload)
   })
 
@@ -82,7 +84,7 @@ export async function watchImmediate(paths: string | string[], options: WatchOpt
     options: opts,
   })
 
-  const unlisten = await appWindow.listen<RawEvent>(`watcher://raw-event/${id}`, event => {
+  const unlisten = await w.listen<RawEvent>(`watcher://raw-event/${id}`, event => {
     cb(event.payload)
   })
 
