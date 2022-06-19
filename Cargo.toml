@@ -3,7 +3,7 @@ name = "tauri-plugin-fs-watch"
 version = "0.0.0"
 authors = [ "Tauri Programme within The Commons Conservancy" ]
 description = "Tauri Plugin to watch the filesystem for changes"
-edition = "2018"
+edition = "2021"
 exclude = ["/examples", "/webview-dist", "/webview-src", "node_modules"]
 
 [dependencies]
