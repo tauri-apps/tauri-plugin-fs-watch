@@ -26,6 +26,6 @@ export type DebouncedEvent = {
     kind: "AnyContinous";
     path: string;
 };
-export declare function watch(paths: string | string[], options: DebouncedWatchOptions, cb: (event: DebouncedEvent) => void): Promise<UnlistenFn>;
-export declare function watchImmediate(paths: string | string[], options: WatchOptions, cb: (event: RawEvent) => void): Promise<UnlistenFn>;
+export declare function watch(paths: string | string[], cb: (event: DebouncedEvent) => void, options?: DebouncedWatchOptions): Promise<UnlistenFn>;
+export declare function watchImmediate(paths: string | string[], cb: (event: RawEvent) => void, options?: WatchOptions): Promise<UnlistenFn>;
 export {};

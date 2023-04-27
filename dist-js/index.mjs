@@ -5,7 +5,7 @@ const w = appWindow;
 async function unwatch(id) {
     await invoke("plugin:fs-watch|unwatch", { id });
 }
-async function watch(paths, options, cb) {
+async function watch(paths, cb, options = {}) {
     const opts = {
         recursive: false,
         delayMs: 2000,
@@ -32,7 +32,7 @@ async function watch(paths, options, cb) {
         unlisten();
     };
 }
-async function watchImmediate(paths, options, cb) {
+async function watchImmediate(paths, cb, options = {}) {
     const opts = {
         recursive: false,
         ...options,
