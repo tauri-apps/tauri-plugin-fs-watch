@@ -1,4 +1,3 @@
-import { UnlistenFn } from "@tauri-apps/api/event";
 export interface WatchOptions {
     recursive?: boolean;
 }
@@ -26,6 +25,6 @@ export type DebouncedEvent = {
     kind: "AnyContinous";
     path: string;
 };
-export declare function watch(paths: string | string[], cb: (event: DebouncedEvent) => void, options?: DebouncedWatchOptions): Promise<UnlistenFn>;
-export declare function watchImmediate(paths: string | string[], cb: (event: RawEvent) => void, options?: WatchOptions): Promise<UnlistenFn>;
+export declare function watch(paths: string | string[], cb: (event: DebouncedEvent) => void, options?: DebouncedWatchOptions): Promise<() => void>;
+export declare function watchImmediate(paths: string | string[], cb: (event: RawEvent) => void, options?: WatchOptions): Promise<() => void>;
 export {};
